@@ -1,4 +1,4 @@
-module com.sowatec.addressbookfx {
+module com.sowatec.tasksfx {
 	requires javafx.controls;
 	requires javafx.fxml;
 	requires javafx.web;
@@ -9,6 +9,7 @@ module com.sowatec.addressbookfx {
 	requires org.kordamp.bootstrapfx.core;
 	requires com.almasb.fxgl.all;
 	requires com.google.gson;
+	requires javafx.graphics;
 
 	opens com.sowatec.tasksfx to javafx.fxml, com.google.gson;
 

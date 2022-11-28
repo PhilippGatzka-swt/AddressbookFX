@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="400.0" minHeight="400.0"
+	prefHeight="400.0" xmlns="http://javafx.com/javafx/19"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.sowatec.tasksfx.MainController">
+	<center>
+		<HBox>
+			<children>
+				<ListView fx:id="listView" maxWidth="300.0"
+					minWidth="300.0" prefWidth="300.0">
+					<HBox.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</HBox.margin>
+				</ListView>
+				<AnchorPane maxWidth="300.0" minWidth="300.0"
+					prefWidth="300.0">
+					<HBox.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</HBox.margin>
+					<children>
+						<DatePicker fx:id="targetDateField" layoutX="20.0"
+							layoutY="86.0" AnchorPane.leftAnchor="15.0"
+							AnchorPane.topAnchor="77.0">
+						</DatePicker>
+						<Label layoutX="20.0" layoutY="14.0" text="Name"
+							AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0"
+							AnchorPane.topAnchor="15.0" />
+						<TextField fx:id="nameField" layoutX="14.0"
+							layoutY="32.0" AnchorPane.leftAnchor="15.0"
+							AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="32.0">
+						</TextField>
+						<TextArea fx:id="descriptionField" layoutX="27.0"
+							layoutY="200.0" prefHeight="114.0" prefWidth="200.0"
+
+							AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0"
+							AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="122.0">
+						</TextArea>
+						<Label layoutX="15.0" layoutY="102.0" text="Description"
+							AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0"
+							AnchorPane.topAnchor="105.0" />
+						<Label layoutX="13.0" layoutY="57.0" text="Target Date"
+							AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0"
+							AnchorPane.topAnchor="60.0" />
+					</children>
+				</AnchorPane>
+			</children>
+		</HBox>
+	</center>
+	<bottom>
+		<ToolBar prefHeight="40.0" prefWidth="200.0"
+
+			BorderPane.alignment="CENTER">
+			<items>
+				<Button fx:id="buttonCreate" mnemonicParsing="false"
+					onAction="#clickCreate" text="Create">
+				</Button>
+				<Button fx:id="buttonSave" mnemonicParsing="false"
+					onAction="#clickSave" text="Save">
+				</Button>
+				<Button fx:id="buttonDelete" mnemonicParsing="false"
+					onAction="#clickDelete" text="Delete">
+				</Button>
+			</items>
+		</ToolBar>
+	</bottom>
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Close"
+							onAction="#clickExit" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Edit">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Delete" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Help">
+					<items>
+						<MenuItem mnemonicParsing="false" text="About" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+</BorderPane>

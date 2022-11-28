@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class TasksFX extends Application {
@@ -17,5 +18,6 @@ public class TasksFX extends Application {
 		stage.setTitle("TasksFX");
 		stage.setScene(scene);
 		stage.show();
+		stage.getIcons().add(new Image(TasksFX.class.getResourceAsStream("icon.png")));
 	}
 }
