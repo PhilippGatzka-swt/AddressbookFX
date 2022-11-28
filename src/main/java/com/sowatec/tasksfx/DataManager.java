@@ -1,4 +1,4 @@
-package com.sowatec.addressbookfx;
+package com.sowatec.tasksfx;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

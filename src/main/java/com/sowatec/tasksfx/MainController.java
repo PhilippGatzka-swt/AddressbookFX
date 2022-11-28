@@ -1,4 +1,4 @@
-package com.sowatec.addressbookfx;
+package com.sowatec.tasksfx;
 
 import java.net.URL;
 import java.time.LocalDate;
