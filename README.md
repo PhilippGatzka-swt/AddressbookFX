@@ -1,3 +1,4 @@
+
 # Setup for IntelliJ
 * Eclipse Adoptium Adapt OpenJDK 11 Hotspot
 
@@ -22,14 +23,22 @@
 
 # Tasks
 ## Easy
-* Add new data to the task class
-* Add a 'clear all' button and its functionality
-* Add log messages
-* Highlight task when its end date is close or reached
+* Add a new attribute to the task class
+	* Add the attribute to the class
+	* Extend the fxml layout to support a checkbox with the tag 'Important'
+	* Add the attribute to the task object when writing the form values to the object
+* Add a new 'Clear all' button to the file menu in the menubar
+	* Add the button to the menu bar
+	* Create a new method 'clickDeleteAll' in the MainController
+	* Button removes all task objects and clears the file
+* Add log messages to the DataController when adding, removing or updating a task
 
 ## Hard
-* Export data as CSV
-	* Add option to select between export methods
+* Add a new way to export data into a CSV file
+	* Add the dependency for the OpenCSV libary
+	* Add the corresponding methods in the Datacontroller
+	* Add a new button to the File menu in the Menubar
+		* This button opens a Dialog where the user can select between JSON and CSV export
 * Add a 'confirm delete' dialog to the delete function
-* Add file -> Set export path button and its functionality
+* Add a new button to the file menu in the menubar to set a specified export path
 
